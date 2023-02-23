@@ -37,8 +37,9 @@
          } else if (button == '=') {
            let equation = displayStore.display;
            displayStore.calculate();
-           let result = displayStore.display;
-           logStore.add(equation, result);
+
+           /*let result = displayStore.display;
+           logStore.add(equation, result);*/
          } else {
            displayStore.insert(button);
          }

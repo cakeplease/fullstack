@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import axios from "axios";
 
 export const useDisplayStore = defineStore('display', () => {
     const display = "";
@@ -37,14 +38,19 @@ export const useDisplayStore = defineStore('display', () => {
     }
     function calculate() {
 
-        let result = eval(this.display).toString();
-
-        if (isFinite(result)) {
-            this.display = eval(this.display).toString();
-        } else {
-            this.display = errorMsg;
-        }
-        answerState = true;
+        axios.get('http://localhost:8080/?calculate='+this.display)
+            .then((res) => {
+                //console.log(res);
+                if (res.status >= 200 && res.status < 300) {
+                    this.response = "wow det funket";
+                } else if (res.status == 400) {
+                    this.response = "NEI! SLUTT!";
+                }
+            })
+            .catch((error) => {
+                //console.error(error);
+                this.response = "Noe gikk galt";
+            });
 
     }
 
