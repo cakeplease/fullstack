@@ -31,25 +31,25 @@ export const useDisplayStore = defineStore('display', () => {
             this.display += text;
         }
 
-
     }
     function clear() {
         this.display = "";
     }
     function calculate() {
-
         axios.get('http://localhost:8080/?calculate='+this.display)
             .then((res) => {
-                //console.log(res);
                 if (res.status >= 200 && res.status < 300) {
-                    this.response = "wow det funket";
-                } else if (res.status == 400) {
-                    this.response = "NEI! SLUTT!";
+                    this.display = res.data;
+                    answerState = true;
                 }
             })
             .catch((error) => {
-                //console.error(error);
-                this.response = "Noe gikk galt";
+                if (error.response.status === 400) {
+                    this.display = errorMsg;
+                    answerState = true;
+                } else {
+                    console.error(error)
+                }
             });
 
     }

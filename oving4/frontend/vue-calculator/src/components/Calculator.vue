@@ -7,6 +7,8 @@
   function randomColors() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16);
   }
+
+
 </script>
 
 <template>
@@ -27,18 +29,23 @@
         event.target.style.fontSize = '20px';
        }"
        @:click="()=> {
-         if (button == 'C') {
+         if (button === 'C') {
            displayStore.clear();
-         } else if (button == 'DEL') {
+         } else if (button === 'DEL') {
            displayStore.remove();
-         } else if (button == 'ANS') {
+         } else if (button === 'ANS') {
            displayStore.clear();
            displayStore.insert(logStore.getLastResult());
-         } else if (button == '=') {
+         } else if (button === '=') {
+
            let equation = displayStore.display;
            displayStore.calculate();
+           let result = displayStore.display;
+           logStore.add(equation, result);
 
-           /*let result = displayStore.display;
+           /*let equation = displayStore.display;
+           displayStore.calculate();
+           let result = displayStore.display;
            logStore.add(equation, result);*/
          } else {
            displayStore.insert(button);

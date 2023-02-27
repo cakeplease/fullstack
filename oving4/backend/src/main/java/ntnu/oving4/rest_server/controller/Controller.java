@@ -1,25 +1,32 @@
 package ntnu.oving4.rest_server.controller;
 
+import jakarta.servlet.http.HttpServletResponse;
+import ntnu.oving4.rest_server.service.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @RestController
 public class Controller {
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/")
-    public String hello(@RequestParam("calculate") String equation) {
+    public String calculate(@RequestParam("calculate") String equation, HttpServletResponse response) throws Exception {
 
+        Logger logger = LoggerFactory.getLogger(Controller.class);
+        logger.info("GET request to calculate "+equation);
 
-        List<String> allMatches = new ArrayList<>();
-        Matcher m = Pattern.compile("([0-9]*[.])?[0-9]+").matcher(equation);
-        while (m.find()) {
-            allMatches.add(m.group());
+        Service service = new Service();
+
+        double ans = 0.0;
+        try {
+            ans = service.calculateEquation(equation);
+            response.setStatus(HttpServletResponse.SC_ACCEPTED);
+            logger.info("GET request to calculate "+equation+" succeeded. The answer is "+ans);
+            return Double.toString(ans);
+        } catch (Exception e) {
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            logger.error("GET request to calculate "+equation+" failed. Exception thrown: "+e);
+            return Double.toString(ans);
         }
-
-        return String.format(Arrays.toString(allMatches.toArray()));
     }
 }
