@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class Controller {
     @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/")
-    public String calculate(@RequestParam("calculate") String equation, HttpServletResponse response) throws Exception {
+    public String calculate(@RequestParam("calculate") String equation, HttpServletResponse response) {
 
         Logger logger = LoggerFactory.getLogger(Controller.class);
         logger.info("GET request to calculate "+equation);

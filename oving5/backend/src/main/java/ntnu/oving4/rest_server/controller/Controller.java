@@ -1,15 +1,19 @@
 package ntnu.oving4.rest_server.controller;
 
 import jakarta.servlet.http.HttpServletResponse;
+import ntnu.oving4.rest_server.model.LoginRequest;
+import ntnu.oving4.rest_server.repository.UserRepository;
 import ntnu.oving4.rest_server.service.Service;
-import org.json.simple.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 public class Controller {
     @CrossOrigin(origins = "http://localhost:5173")
+
     @GetMapping("/")
     public String calculate(@RequestParam("calculate") String equation, HttpServletResponse response) {
         Logger logger = LoggerFactory.getLogger(Controller.class);
@@ -32,12 +36,11 @@ public class Controller {
 
     @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping("/login")
-    public int login(@RequestBody String loginDetails) {
-        //TODO convert loginDetails json array to normal java array
+    public int login(@RequestBody LoginRequest loginDetails) {
         Logger logger = LoggerFactory.getLogger(Controller.class);
-       /* logger.info("Login request from "+username);
+        logger.info("Login request from "+loginDetails.username());
         Service service = new Service();
-        int userID = service.login(username, password);
-        return userID;*/
+        int userID = service.login(loginDetails.username(), loginDetails.password());
+        return userID;
     }
 }

@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 
 public class EquationUserRepository {
-    private JdbcTemplate jdbcTemplate;
+    public JdbcTemplate jdbcTemplate;
     public Equation getEquationsBasedOnUser(int userID) {
         try {
             Equation equation = jdbcTemplate.queryForObject("SELECT * FROM equation WHERE user_id=?",

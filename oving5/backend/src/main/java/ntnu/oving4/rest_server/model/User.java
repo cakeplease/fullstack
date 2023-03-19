@@ -22,6 +22,10 @@ public class User {
         return this.username;
     }
 
+    public String getPassword() {
+        return this.password;
+    }
+
     public void addEquation(Equation equation) {
         this.equations.add(equation);
     }

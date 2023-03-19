@@ -56,12 +56,12 @@
     </div>
   </div>
 
-  <div class="log-wrapper">
+<!--  <div class="log-wrapper">
     <h3>Logg:</h3>
     <div class="log">
       <p v-for="log in logStore.log">{{ log }}</p>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <style lang="scss">

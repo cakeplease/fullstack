@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65f6cd96-82f6-4b5c-abce-f559b1d5c736" name="Changes" comment="">
+    <list default="true" id="4acbcef1-1f55-4470-958b-22090a27995e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../oving4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oving4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oving4/backend/src/main/java/ntnu/oving4/rest_server/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oving4/backend/src/main/java/ntnu/oving4/rest_server/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/src/components/Calculator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/src/components/Calculator.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/src/stores/display.js" beforeDir="false" afterPath="$PROJECT_DIR$/../oving4/frontend/vue-calculator/src/stores/display.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/ntnu/oving4/rest_server/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ntnu/oving4/rest_server/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue-calculator/src/components/Calculator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue-calculator/src/components/Calculator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vue-calculator/src/stores/display.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vue-calculator/src/stores/display.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2M5wSGBDCLf1f1L7XWZnhU84Q1u" />
+  <component name="ProjectId" id="2N8W231dktVAMUp1SzX9bg8qgSn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,27 +29,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/kasia/network-programming/compiler_docker",
-    "nodejs_package_manager_path": "npm",
+    "last_opened_file_path": "/home/kasia/fullstack/oving5/backend",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="65f6cd96-82f6-4b5c-abce-f559b1d5c736" name="Changes" comment="" />
-      <created>1677070750575</created>
+      <changelist id="4acbcef1-1f55-4470-958b-22090a27995e" name="Changes" comment="" />
+      <created>1679045978176</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677070750575</updated>
-      <workItem from="1677070752738" duration="12000" />
-      <workItem from="1677070806191" duration="57000" />
-      <workItem from="1677828703379" duration="32000" />
+      <updated>1679045978176</updated>
+      <workItem from="1679045979373" duration="9000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

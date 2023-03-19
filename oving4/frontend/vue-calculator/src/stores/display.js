@@ -36,9 +36,12 @@ export const useDisplayStore = defineStore('display', () => {
         this.display = "";
     }
     function calculate() {
-        axios.get('http://localhost:8080/?calculate='+this.display)
+
+        let equation = this.display;
+        equation = equation.replace("+", "%2B");
+        axios.get('http://localhost:8080/?calculate='+equation)
             .then((res) => {
-                if (res.status >= 200 && res.status < 300) {
+                if (res.status >= 202 && res.status < 300) {
                     this.display = res.data;
                     answerState = true;
                 }
